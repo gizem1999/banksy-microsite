@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head> 
+          <meta name="viewport" content="width=device-width; user-scalable=1" />
+          <meta charset="utf-8">
+          <title>Portfolio</title>  
+          <link rel="stylesheet" href="Design/style.css">
+		 
+	</head>
+	
+	<body> 
+		
+		 <nav class="navbar">
+		      <div class="max-width">
+			    <div class="logo"><a onclick="closeDropdown()" href="#">Portfolio</a></div>
+			      
+	            <ul id="menuepunkte">
+		            <li class="menuepunkte"><a href="#">Home</a></li>
+		            <li class="menuepunkte"><a href="#about">About</a></li>
+		            <li class="menuepunkte"><a href="#portfolio">Portfolio</a></li>
+		           <li class="menuepunkte"><a href="#contact">Contact</a></li>
+			    </ul>
+			
+			     <button onclick="openDropdown()" id="dropdownButton">
+				     <div class="line"></div>
+			         <div class="line"></div>
+			         <div class="line"></div>
+			     </button>
+		     </div>
+			 
+			 
+		 <div id="dropdownMenue">
+		 
+		       <ul id="menuepunkteDropdown">
+		          <li class="menuepunkte"><a onclick="closeDropdown()" href="#">Home</a></li>
+		          <li class="menuepunkte"><a onclick="closeDropdown()" href="#about">About</a></li>
+		          <li class="menuepunkte"><a onclick="closeDropdown()" href="#portfolio">Portfolio</a></li>
+		          <li class="menuepunkte"><a onclick="closeDropdown()" href="#contact">Contact</a></li>
+			  </ul>
+		 </div>
+		 
+	    </nav> 
+	   
+	   
+	   
+	   <script>
+	   
+	       function checkWidth(x) {
+		      if (x.matches) {
+			  //display sandwich menue
+				document.getElementById("dropdownButton").style.display = 'block';
+				document.getElementById("menuepunkte").style.display = 'none';
+				document.getElementById("dropdownMenue").style.display = 'none';
+			  } else {
+			  //display menuepoints
+				document.getElementById("dropdownButton").style.display = 'none';
+				document.getElementById("dropdownMenue").style.display = 'none';
+				document.getElementById("menuepunkte").style.display = 'block';
+			  }
+			  
+			 }
+			 isDropdownOpen = false;
+			 function openDropdown(){
+				console.log("hallo button");
+
+				if(isDropdownOpen){
+					document.getElementById("dropdownMenue").style.display = 'none';
+				}
+				else{
+					document.getElementById("dropdownMenue").style.display = 'block';
+				}
+				
+				isDropdownOpen = !isDropdownOpen;
+			 }
+			 
+			 var x = window.matchMedia("(max-width: 750px)");
+			 checkWidth(x);
+			 x.addListener(checkWidth);
+			 
+			 function closeDropdown(){
+				document.getElementById("dropdownMenue").style.display = 'none';
+			 }
+			   
+	          
+	   </script>
+	
+	
+	
+	
+	 
+		<!--------------- Startseite ------------------>
+		
+	     <main>
+		   
+	         <section class="home" id="home">
+		
+                 <div class="max-width">
+			        <div class="content">
+		               <h1>Banksy</h1>
+				       <h2>und seine Werke</h2>
+				    </div>
+		         </div>
+              </section>
+	
+	
+	
+	
+		<!-------------------------------- About ---------------------->
+		
+		
+		<section class="about" id="about">
+		
+             <div class="max-width">
+			      <h2 class="title">About Banksy</h2>
+			        <div class="about-content">
+		                 <div class="column left">
+				           <img src="Images/elephant.jpg" alt="">				 
+				         </div>
+					
+				        <div class="column right">
+				           <div class="text">Der Streetart-Künstler <span> Banksy,</span></div>
+					            <p> ist trotz seiner geheimen Identität, 
+					               einer der bekanntesten Künstler Englands dieser Zeit. Bansky ist das Pseudonym, das der Künstler angenommen hat. Er ist sehr darauf bedacht
+					               sein Privatleben geheim zu halten, die meisten Details seines Lebens sind der Öffentlichkeit unbekannt. Mit seinen Graffiti-Arbeiten ist er sehr erfolgreich,
+					               diese weisen häufig eine Kombination von Sprayfarbe und Schabloniertechnik auf, mit einer kommerziellen, politischen und zeitgenössischen Bildsprache, durchwachsen
+					               mit Ironie und Humor.
+                                   Sein Werk ist reich an dunklem Humor und wird häufig mit subversiven Epigrammen versehen, die abwertende Kommentare zu gesellschaftspolitischen Aspekten
+					               des zeitgenössischen Lebens liefern. Banksys eigenes Leitbild, "Kunst sollte die Betroffenen trösten und die Gemütlichen stören".
+					            </p>  <!-- Text kopiert von: https://artsation.com/artists/banksy -->      
+					
+				        </div>
+		            </div>
+			 </div>
+        </section>
+		
+		
+		
+		
+		<!------------------------ Portfolio ----------------------------->
+		
+		
+		<section class="portfolio" id="portfolio">
+		
+             <div class="max-width">
+			   <h2 class="title">Portfolio</h2>
+			     <div class="portfolio-content">					
+				   <div class="column bottom">
+				      <div class="text">Merkmale und Besonderheiten seiner Werke
+					  </div>
+					     <p> Banksy bedient sich der Taktiken der Kommunikationsguerilla, insbesondere was seine Inspirationsquellen betrifft (wie beispielsweise der des französischen 
+					        Pochoir-Künstlers Blek le Rat) und der Adbusters, um eine alternative Sichtweise auf politische und wirtschaftliche Themen zu bieten. Er verändert und modifiziert
+					        dabei oftmals bekannte Motive und Bilder. Er nahm Auftragsarbeiten für wohltätige Zwecke an (beispielsweise für Greenpeace) und gestaltete eine Reihe von CD-Covern 
+					        u. a. für das Label Wall of Sound sowie 2003 für die Band Blur.
+                            Neben seinen Schablonen-Graffiti hängt Banksy eigene Arbeiten auch ungefragt in Museen auf. Sowohl im Londoner Tate Modern, New Yorker Museum of Modern Art, Metropolitan
+					        Museum of Art, Brooklyn Museum, American Museum of Natural History als auch im Louvre hingen 2005 seine Arbeiten auf diese Weise.
+					     </p>   <!-- Text kopiert von: https://artsation.com/artists/banksy -->   
+				   </div> 			   
+		        </div>
+			</div>
+       </section>
+		
+		
+        <div id="Auswahl"><div id="Miniaturen" style="left:0px"></div></div>
+		<div id="anzeige"></div>
+		<script>
+		
+			function galerie( liste ) {
+				var ausgabe = '' ;
+				for( var bild of liste ) {
+						ausgabe = ausgabe + '<img src="Images/miniaturen/'+ bild +'.jpg" id="'+ bild +'" />' ;  
+				}
+				return ausgabe ;
+			}
+			
+			
+			var motive = [
+				'balloon','blumen','blumenstrauß','elephant',
+				'hammer','hulahoop','pferd','portrait',
+				'regenschirm','telefon','telefonzelle','benzin',
+				'kleineBilder','hund'
+				
+			] ;
+		      
+	        var versatz = 0 ;
+    
+            var auswahl = document.getElementById('Auswahl');
+            var miniaturen = document.getElementById('Miniaturen');
+			
+			miniaturen.innerHTML = galerie( motive.concat( motive ) ) ;
+			
+
+      
+			
+			function bewegen() {
+			
+			    var anzeigeBreite = auswahl.offsetWidth ;
+				var halbeBreite = motive.length * miniaturen.firstChild.offsetWidth ;
+				var altesLinks = parseInt( miniaturen.style.left ) ;
+				var neuesLinks = altesLinks + versatz ;
+				if( neuesLinks > 0 ) neuesLinks = neuesLinks - halbeBreite ;
+				if( neuesLinks < -2* halbeBreite + anzeigeBreite ) neuesLinks = neuesLinks + halbeBreite ;
+				miniaturen.style.left = neuesLinks +'px' ;
+				
+			}
+			
+			window.setInterval( bewegen, 1000 /20 ) ;
+			miniaturen.addEventListener('mouseleave', mausereignis => { versatz = 0 ; } ) ;
+			miniaturen.addEventListener('mousemove', mausereignis => { berechneVersatz( mausereignis, auswahl ) } ) ;
+			
+			
+			function berechneVersatz( mausereignis, element ) {
+				var links = element.offsetLeft ;
+				var breite = element.offsetWidth ;
+				var mitte = links + breite /2 ;
+				var abstand = mitte - mausereignis.x ;
+				versatz = 20 * abstand / (breite/2) ;
+			}
+			
+			
+		</script>
+	
+	
+	
+	
+	<!---------------------------- Contact ----------------------------->
+	
+	    <section class="contact" id="contact">
+		
+		    <div class="max-width">
+			      <h2 class="title">Contact me</h2>
+			    <div class="contact-content"> 
+			        <div class="column left">
+			             <div class="text">Habt ihr noch Fragen?</div>
+				              <p> Dann meldet euch bei mir!
+						       </p>
+						 
+		                     <div class="row">	
+							        <a class="navbarLinks" href="" >&#128100;</a>    <!-- Code kopiert von: https://www.w3schools.com/charsets/ref_emoji.asp --> 
+							     <div class="info">
+								   <div class="head">Name</div>
+								     <div class="sub-title">Gizem Elmas</div>
+								 </div>
+							 </div>
+							 
+							   <div class="row">	
+							       <a class="navbarLinks" href="" >&#128210;</a>   <!-- Code kopiert von: https://www.w3schools.com/charsets/ref_emoji.asp --> 
+							      <div class="info">
+								     <div class="head">Adresse</div>
+								        <div class="sub-title">69123, Heidelberg</div>
+								  </div>
+								  
+							  </div>
+							      <div class="row">
+							          <a class="navbarLinks" href="" >&#9993;</a>       <!-- Code kopiert von: https://www.w3schools.com/charsets/ref_emoji.asp --> 
+							             <div class="info">
+								             <div class="head">Email</div>
+								               <div class="sub-title">gizemelmas@web.de
+											   </div>
+								         </div>
+							       </div>
+				              </div>	
+							  
+							  
+                            <div class="column right">	
+                                 <div class="text">Schreibe mir eine Nachricht</div>
+							         <form action="#">
+							             <div class="fields">
+									          <div class="field name">
+										          <input type="text" placeholder="Name" required >
+									          </div>
+										      <div class="field email">
+										          <input type="email" placeholder="Email"required >
+									           </div>
+										 </div>
+										 
+									          <div class="field">
+										           <input type="text" placeholder="Thema" required>
+									          </div>
+										      <div class="field textarea">
+										           <textarea cols="30" rows="10" placeholder="Schreibe eine Nachricht.." required></textarea>
+									          </div>
+										       <div class="button">
+										            <button type="submit">Nachricht senden</button>	    
+											   </div>
+							         </form>
+                            </div>							    
+				</div>		
+			</div>   
+	     </section>	 
+   </main>
+   
+   
+	   <footer>
+	      <a href="HTML/datenschutz.html" >Datenschutz</a>
+		  <a href="HTML/impressum.html" >Impressum</a>		  
+	   </footer>
+ 
+    </body>
+</html>
